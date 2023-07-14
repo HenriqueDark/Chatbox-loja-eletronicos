@@ -1,0 +1,87 @@
+def iniciar_chat():
+    boas_vindas()
+    while True:
+        mensagem = receber_mensagem_do_usuario()
+        if "criar usuário" in mensagem:
+            criar_usuario()
+        elif "recuperar senha" in mensagem:
+            recuperar_senha()
+        elif "localizar itens" in mensagem:
+            localizar_itens()
+        elif "pagamento via pix" in mensagem:
+            pagamento_pix()
+        elif "pagamento via cartão de crédito" in mensagem:
+            pagamento_cartao_credito()
+        elif "atendimento via whatsapp" in mensagem:
+            atendimento_whatsapp()
+        elif "sair" in mensagem:
+            finalizar_chat()
+            break
+        else:
+            responder_padrao()
+
+def boas_vindas():
+    print("Bem-vindo ao chat de atendimento! Como posso ajudar?")
+    print("Digite 'criar usuário' para saber como criar uma conta.")
+    print("Digite 'recuperar senha' para receber instruções de recuperação de senha.")
+    print("Digite 'localizar itens' para aprender como encontrar produtos no site.")
+    print("Digite 'pagamento via pix' para obter informações sobre pagamentos via pix.")
+    print("Digite 'pagamento via cartão de crédito' para saber como efetuar pagamentos com cartão de crédito.")
+    print("Digite 'atendimento via whatsapp' para ser encaminhado para atendimento via WhatsApp.")
+    print("Digite 'sair' para encerrar o chat.")
+
+def receber_mensagem_do_usuario():
+    mensagem = input("Você: ")
+    return mensagem.lower()
+
+def criar_usuario():
+    print("Para criar uma conta, siga os seguintes passos:")
+    print("1. Acesse nosso site.")
+    print("2. Clique em 'Criar conta' na página inicial.")
+    print("3. Preencha o formulário de registro com suas informações.")
+    print("4. Clique em 'Enviar' para criar sua conta.")
+    print("5. Pronto! Sua conta foi criada com sucesso.")
+
+def recuperar_senha():
+    print("Se você esqueceu sua senha, siga estas etapas:")
+    print("1. Acesse a página de login no nosso site.")
+    print("2. Clique em 'Esqueceu sua senha?'")
+    print("3. Digite o endereço de e-mail associado à sua conta.")
+    print("4. Verifique sua caixa de entrada de e-mail para receber um link de redefinição de senha.")
+    print("5. Siga as instruções fornecidas no e-mail para redefinir sua senha.")
+
+def localizar_itens():
+    print("Para localizar itens no nosso site, siga estas dicas:")
+    print("1. Use a barra de pesquisa no topo da página.")
+    print("2. Digite palavras-chave relacionadas ao produto que você está procurando.")
+    print("3. Navegue pelos resultados da pesquisa para encontrar o item desejado.")
+    print("4. Clique no item para obter mais detalhes e fazer a compra.")
+
+def pagamento_pix():
+    print("Aceitamos pagamentos via PIX. Siga as instruções abaixo:")
+    print("1. Ao finalizar a compra, selecione a opção de pagamento via PIX.")
+    print("2. Anote a chave PIX fornecida.")
+    print("3. Acesse o aplicativo do seu banco e selecione a opção de pagamento via PIX.")
+    print("4. Digite a chave PIX anotada e o valor total da compra.")
+    print("5. Confirme a transação e aguarde a confirmação de pagamento.")
+
+def pagamento_cartao_credito():
+    print("Oferecemos pagamentos com cartão de crédito. Siga estes passos:")
+    print("1. Ao finalizar a compra, selecione a opção de pagamento com cartão de crédito.")
+    print("2. Preencha os campos solicitados com as informações do seu cartão.")
+    print("3. Revise as informações e confirme o pagamento.")
+    print("4. Aguarde a confirmação de pagamento.")
+
+def atendimento_whatsapp():
+    print("Você será encaminhado para o atendimento via WhatsApp.")
+    print("Aguarde um momento, por favor.")
+    # Adicione aqui a lógica para encaminhar para o atendimento via WhatsApp
+
+def finalizar_chat():
+    print("Obrigado por usar nosso chat de atendimento. Volte sempre!")
+
+def responder_padrao():
+    print("Desculpe, não entendi sua pergunta. Por favor, tente novamente.")
+
+# Iniciar o chat
+iniciar_chat()
